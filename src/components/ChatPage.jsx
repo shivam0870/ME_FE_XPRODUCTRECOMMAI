@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import responses from "../responses.json";
 import { Link } from "react-router-dom";
-
+import "./ChatPage.css";
 
 function ChatPage() {
   const [input, setInput] = useState("");
