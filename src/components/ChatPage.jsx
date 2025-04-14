@@ -44,26 +44,54 @@ function ChatPage() {
     setInput("");
   };
 
-  return (
+//   return (
+//     <div className="chat-page">
+//       <div className="chat-box">
+//         {chat.map((msg, idx) => (
+//           <div key={idx} className={`msg ${msg.from}`}>{msg.text}</div>
+//         ))}
+//       </div>
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           value={input}
+//           placeholder="Please tell me about your query!"
+//           onChange={(e) => setInput(e.target.value)}
+//         />
+//         <button type="submit">Ask</button>
+//         <button type="button" onClick={handleSave}>Save</button>
+//       </form>
+//       <Link to="/" onClick={handleReset}>Want new suggestion?</Link>
+//     </div>
+//   );
+
+return (
     <div className="chat-page">
-      <div className="chat-box">
-        {chat.map((msg, idx) => (
-          <div key={idx} className={`msg ${msg.from}`}>{msg.text}</div>
-        ))}
+      <div className="chat-container">
+        <div className="chat-box">
+          {chat.map((msg, idx) => (
+            <div key={idx} className={`msg ${msg.from}`}>{msg.text}</div>
+          ))}
+        </div>
+  
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={input}
+            placeholder="Please tell me about your query!"
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Ask</button>
+          <button type="button" onClick={handleSave}>Save</button>
+        </form>
+  
+        <Link to="/" onClick={handleReset}>Want new suggestion?</Link>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={input}
-          placeholder="Please tell me about your query!"
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">Ask</button>
-        <button type="button" onClick={handleSave}>Save</button>
-      </form>
-      <Link to="/" onClick={handleReset}>Want new suggestion?</Link>
     </div>
   );
+  
+
+
 }
 
 export default ChatPage;
