@@ -1,0 +1,55 @@
+.app-container {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.msg {
+  margin: 5px;
+}
+
+.msg.user {
+  text-align: right;
+  color: blue;
+}
+
+.msg.bot {
+  text-align: left;
+  color: green;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
